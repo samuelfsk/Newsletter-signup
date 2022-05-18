@@ -4,12 +4,14 @@
  const bodyParser = require("body-parser");
  const request = require("request");
  const mailchimp = require("@mailchimp/mailchimp_marketing");
+ const {config }  = require('./config.js');
 
  const app = express();
 
  mailchimp.setConfig({
-   apiKey: "db9281d723c1c2cbb61071defad44670-us10",
-   server: "us10",
+   apiKey: config.API_KEY,
+   server: config.SERVER_NAME,
+
  });
  // this is important because the local files(css and images) won't be rendered if not for this
  app.use(express.static("public"));
@@ -64,15 +66,3 @@ run();
  app.listen(process.env.PORT || 3000, function(){
    console.log("server is running");
  });
-
-
-
-
-
-
-
-
-
-
- //API key:db9281d723c1c2cbb61071defad44670-us10
-// audience id: bc24ed1221
