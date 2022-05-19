@@ -8,7 +8,7 @@
  const app = express();
 
  mailchimp.setConfig({
-   apiKey: "db9281d723c1c2cbb61071defad44670-us10",
+   apiKey: "f06c01b25730c190c0edbe60346ce385-us10",
    server: "us10",
  });
  // this is important because the local files(css and images) won't be rendered if not for this
