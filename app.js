@@ -64,5 +64,5 @@ run();
 
 // the port is set to process.env.PORT for heroku deployment and 3000 for local testing
  app.listen(process.env.PORT || 3000, function(){
-   console.log("server is running");
+   console.log("server is running"+ config.API_KEY);
  });
